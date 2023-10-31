@@ -14,26 +14,28 @@ import java.nio.file.NoSuchFileException;
 public class PokemonMain {
 
     public static void main(String[] args) throws NoSuchFileException {
-        String archivoCSV = "pokemons.csv";
+        PokemonDAOFile pokemonDAO = new PokemonDAOFile("C:\\Users\\2DAM\\IdeaProjects\\Pokemon\\pokemons.csv");
 
 
+        Pokemon p2 = new Pokemon("Jorge", 3, 90, 65, 48, 79, 45, 80);
 
-        Pokemon p1 = new Pokemon("Charizard", 70, 150, 85, 78, 109, 85, 100);
-        Pokemon p2 = new Pokemon("Charmander", 70, 150, 85, 78, 109, 85, 100);
-        PokemonDAOFile dao = new PokemonDAOFile();
-        //dao.estaVacio();
-        //dao.estaLLeno();
+        //pokemonDAO.estaVacio();
+        /*if (!pokemonDAO.estaLLeno()) {
+            System.out.println("La lista de Pokémon no está llena.");
+        } else {
+            System.out.println("La lista de Pokémon está llena.");
+        }*/
         /*try {
-            dao.aniadir(p1);
-            dao.aniadir(p2);
+            pokemonDAO.aniadir(p2);
         } catch (NoMasPokemonsException e) {
             throw new RuntimeException(e);
         } catch (PokemonDuplicadoException e) {
             throw new RuntimeException(e);
         }*/
-        // dao.eliminar(p2);
-        // dao.pokemonCSV(archivoCSV,"Pikachu",50,100,60,40,60,80,90);
-        //dao.imprimirPokemonCSV(archivoCSV);
-        dao.imprimirPokemon("Charizard");
+        //pokemonDAO.eliminar(p2);
+        //pokemonDAO.pokemonCSV("pokemons.csv","Jorge", 3, 90, 65, 48, 79, 45, 80);
+        //pokemonDAO.imprimirPokemonCSV("pokemons.csv");
+        //pokemonDAO.imprimirPokemon("Char");
+        //pokemonDAO.leerPokemons("char");
     }
 }

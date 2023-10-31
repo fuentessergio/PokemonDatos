@@ -6,7 +6,6 @@ package dao.pokemon;
 
 import java.io.*;
 import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,52 +14,50 @@ import java.util.List;
  * @author Sergio Cuesta
  */
 public class PokemonDAOFile implements PokemonDAO {
-    private List<Pokemon> listaPokemon;
-    private Pokemon pokemon = new Pokemon();
+    private String archivoCSV;
 
-    public PokemonDAOFile (){
-        listaPokemon = new ArrayList<>();
+    public PokemonDAOFile (String archivoCSV){
+        this.archivoCSV=archivoCSV;
     }
 
 
 
     @Override
     public boolean estaVacio() {
-        return listaPokemon.isEmpty();
+        File archivo = new File(archivoCSV);
+        if(!archivo.exists() && archivo.length() == 0){
+            return true; // esta vacio
+        } return false;
     }
+
 
     @Override
     public boolean estaLLeno() {
-        if(listaPokemon.size() >= Pokemon.LIMITE_POKEMONS){
+        List<Pokemon> listaPokemon = leerPokemons();
+        if(listaPokemon != null && listaPokemon.size() >= Pokemon.LIMITE_POKEMONS){
           return true; // si esta lleno
         } else return false;
     }
 
     @Override
     public void aniadir(Pokemon pokemon) throws NoMasPokemonsException, PokemonDuplicadoException {
-        //comprobar si no superamos el limite de 1010
-        if(listaPokemon.size() >= Pokemon.LIMITE_POKEMONS){
-            throw new NoMasPokemonsException();
-        } else {
-            // recorremos la lista y comprobamos si hay un pokemon con el mismo nombre
-            for(Pokemon p : listaPokemon){
-                if(p.getNombre().equals(pokemon.getNombre())){
-                    throw new PokemonDuplicadoException();
-                }
+        List<Pokemon> listaPokemon = leerPokemons();
+        for(Pokemon p : listaPokemon){
+            if(p.getNombre().equals(pokemon.getNombre())){
+                throw new PokemonDuplicadoException();
             }
-        listaPokemon.add(pokemon);
-            //System.out.println(listaPokemon);
         }
+        listaPokemon.add(pokemon);
+        guardarPokemons(listaPokemon);
     }
 
     @Override
     public boolean eliminar(Pokemon pokemon) {
-        for (Pokemon p : listaPokemon){
-            if(p.getNombre().equals(pokemon.getNombre())) {
-                listaPokemon.remove(p);
-                //System.out.println(listaPokemon);
-                return true;
-            }
+        String nombre = pokemon.getNombre();
+        List<Pokemon> listaPokemon = leerPokemons();
+        if(listaPokemon.removeIf(p -> p.getNombre().equals(nombre))){ // elementos que cumpla la condicion se eliminan
+            guardarPokemons(listaPokemon);
+            return true; // se elimino
         }
         return false;
     }
@@ -81,51 +78,96 @@ public class PokemonDAOFile implements PokemonDAO {
 
     @Override
     public void imprimirPokemonCSV(String ruta) throws NoSuchFileException {
-        // no he conseguido hacer lo de la cadena
+        // no he conseguido hacer lo de la cadena "saur"
         try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
             String linea;
             while ((linea = br.readLine()) !=null){
                 String [] partes = linea.split(";");
-                if(partes.length == 8){
+                if(partes.length == 8) {
                     // esto seria mejor hacerlo en un metodo a parte yo creo??
-                    String nombre = partes [0];
-                    pokemon.setNombre(nombre);
-                    pokemon.setNivel(Integer.parseInt(partes[1]));
-                    pokemon.setVida(Integer.parseInt(partes[2]));
-                    pokemon.setAtaque(Integer.parseInt(partes[3]));
-                    pokemon.setDefensa(Integer.parseInt(partes[4]));
-                    pokemon.setAtaqueEspecial(Integer.parseInt(partes[5]));
-                    pokemon.setDefensaEspecial(Integer.parseInt(partes[6]));
-                    pokemon.setVelocidad(Integer.parseInt(partes[7]));
-                    System.out.println(pokemon.toString());
+                    Pokemon pokemon = procesarLineaCSV(partes);
+                    System.out.println(); // para separar cada pokemon
+                    System.out.println(pokemon);
                 }
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } catch (PokemonDuplicadoException e) {
-            throw new RuntimeException(e);
         }
+    }
+
+    private Pokemon procesarLineaCSV(String[] partes) {
+        String nombre = partes[0];
+        int nivel = Integer.parseInt(partes[1]);
+        int vida = Integer.parseInt(partes[2]);
+        int ataque = Integer.parseInt(partes[3]);
+        int defensa = Integer.parseInt(partes[4]);
+        int ataqueEspecial = Integer.parseInt(partes[5]);
+        int defensaEspecial = Integer.parseInt(partes[6]);
+        int velocidad = Integer.parseInt(partes[7]);
+
+        Pokemon nuevoPokemon = new Pokemon(nombre, nivel, vida, ataque, defensa, ataqueEspecial, defensaEspecial, velocidad);
+        return nuevoPokemon;
+        // System.out.println(nuevoPokemon);
     }
 
     @Override
     public void imprimirPokemon(String nombre) {
+        List<Pokemon> listaPokemon = leerPokemons();
         for (Pokemon p : listaPokemon){
-            if(p.getNombre().equals(nombre)){
-                System.out.println(p.toString());
+            if(p.getNombre().toLowerCase().contains(nombre.toLowerCase())){ // esto sirve para buscar por una letra o cadena "s" y sale todos los pokemon con s
+                System.out.println(p);
+                System.out.println();
             }
         }
     }
 
     @Override
-    public List<PokemonMain> leerPokemons() {
-        return null;
+    public List<Pokemon> leerPokemons() {
+        List<Pokemon> listaPokemon = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoCSV))) {
+            String linea;
+            while ((linea = br.readLine()) !=null){
+                String [] partes = linea.split(";");
+                if(partes.length == 8) {
+                    // esto seria mejor hacerlo en un metodo a parte yo creo??
+                    Pokemon pokemon = procesarLineaCSV(partes);
+                    listaPokemon.add(pokemon);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return listaPokemon;
     }
 
     @Override
-    public List<PokemonMain> leerPokemons(String nombre) {
-        return null;
+    public List<Pokemon> leerPokemons(String nombre) {
+        List<Pokemon> pokemons = leerPokemons();
+        List<Pokemon> pokemonsFiltrados = new ArrayList<>();
+
+        for (Pokemon pokemon : pokemons){ // recorro pokemons
+            if(pokemon.getNombre().toLowerCase().contains(nombre.toLowerCase())){ // si pokemon de la lista contiene algo que metes en el string
+                pokemonsFiltrados.add(pokemon);
+            }
+        }
+        System.out.println(pokemonsFiltrados);
+        return pokemonsFiltrados;
+    }
+
+    private void guardarPokemons (List<Pokemon> pokemons){
+        try(PrintWriter pw = new PrintWriter(new FileWriter(archivoCSV))){
+            for (Pokemon pokemon : pokemons){
+                pw.println(pokemon.getNombre() + ";" + pokemon.getNivel() + ";" + pokemon.getVida() + ";" +
+                pokemon.getAtaque() + ";" + pokemon.getDefensa() + ";" + pokemon.getAtaqueEspecial() + ";"
+                + pokemon.getDefensaEspecial() + ";" + pokemon.getVelocidad());
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

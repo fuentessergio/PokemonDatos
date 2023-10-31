@@ -109,7 +109,7 @@ public interface PokemonDAO {
 	 * @return lista con todos los pokemons que haya almacenados. 
          *  Lista vacía si no hay ninguno. 
 	 */
-	public List<PokemonMain> leerPokemons();
+	public List<Pokemon> leerPokemons();
 
 	/**
 	 *  Devuelve una lista de objetos pokemon que contengan esa cadena en el 
@@ -123,6 +123,6 @@ public interface PokemonDAO {
          *  el criterio. 
          *  Lista vacía si no hay ninguno. 
 	 */
-	public List<PokemonMain> leerPokemons(String nombre);
+	public List<Pokemon> leerPokemons(String nombre);
 }
 

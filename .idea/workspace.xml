@@ -1,7 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c114e0d5-5957-40de-b0d2-6643750697ff" name="Changes" comment="pokemon">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pokemons.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/Pokemon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2XWGbmZm66qLxMVN1gja9yW2NzB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/2DAM/IdeaProjects/Pokemon",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="PokemonMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dao.pokemon.PokemonMain" />
+      <module name="Pokemon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.pokemon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PokemonMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c114e0d5-5957-40de-b0d2-6643750697ff" name="Changes" comment="" />
+      <created>1698737498554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698737498554</updated>
+      <workItem from="1698737499656" duration="13297000" />
+    </task>
+    <task id="LOCAL-00001" summary="pokemon">
+      <option name="closed" value="true" />
+      <created>1698737570205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698737570206</updated>
+    </task>
+    <task id="LOCAL-00002" summary="pokemon">
+      <option name="closed" value="true" />
+      <created>1698737715627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698737715627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pokemon" />
+    <option name="LAST_COMMIT_MESSAGE" value="pokemon" />
   </component>
 </project>
