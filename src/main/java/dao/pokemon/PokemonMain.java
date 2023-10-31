@@ -36,6 +36,6 @@ public class PokemonMain {
         //pokemonDAO.pokemonCSV("pokemons.csv","Jorge", 3, 90, 65, 48, 79, 45, 80);
         //pokemonDAO.imprimirPokemonCSV("pokemons.csv");
         //pokemonDAO.imprimirPokemon("Char");
-        //pokemonDAO.leerPokemons("char");
+        pokemonDAO.leerPokemons();
     }
 }

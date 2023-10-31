@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c114e0d5-5957-40de-b0d2-6643750697ff" name="Changes" comment="pokemon">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokemons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pokemons.csv" afterDir="false" />
+    <list default="true" id="c114e0d5-5957-40de-b0d2-6643750697ff" name="Changes" comment="pokemon terminado">
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/Pokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" afterDir="false" />
     </list>
@@ -74,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698737498554</updated>
-      <workItem from="1698737499656" duration="13297000" />
+      <workItem from="1698737499656" duration="13612000" />
     </task>
     <task id="LOCAL-00001" summary="pokemon">
       <option name="closed" value="true" />
@@ -92,7 +87,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698737715627</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pokemon terminado">
+      <option name="closed" value="true" />
+      <created>1698751868194</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751868194</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pokemon terminado">
+      <option name="closed" value="true" />
+      <created>1698751892393</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751892393</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pokemon" />
-    <option name="LAST_COMMIT_MESSAGE" value="pokemon" />
+    <MESSAGE value="pokemon terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="pokemon terminado" />
   </component>
 </project>

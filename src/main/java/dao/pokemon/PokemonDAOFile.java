@@ -134,6 +134,7 @@ public class PokemonDAOFile implements PokemonDAO {
                     // esto seria mejor hacerlo en un metodo a parte yo creo??
                     Pokemon pokemon = procesarLineaCSV(partes);
                     listaPokemon.add(pokemon);
+                    System.out.println(listaPokemon);
                 }
             }
         } catch (FileNotFoundException e) {
