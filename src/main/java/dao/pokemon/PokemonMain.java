@@ -14,7 +14,7 @@ import java.nio.file.NoSuchFileException;
 public class PokemonMain {
 
     public static void main(String[] args) throws NoSuchFileException {
-        PokemonDAOFile pokemonDAO = new PokemonDAOFile("C:\\Users\\2DAM\\IdeaProjects\\Pokemon\\pokemons.csv");
+        PokemonDAOFile pokemonDAO = new PokemonDAOFile("C:\\Users\\fuent\\OneDrive\\Documentos\\GitHub\\PokemonDatos\\pokemons.csv");
 
 
         Pokemon p2 = new Pokemon("Jorge", 3, 90, 65, 48, 79, 45, 80);

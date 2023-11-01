@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c114e0d5-5957-40de-b0d2-6643750697ff" name="Changes" comment="pokemon terminado">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,28 +18,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2XWGbmZm66qLxMVN1gja9yW2NzB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/2DAM/IdeaProjects/Pokemon",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/2DAM/IdeaProjects/Pokemon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PokemonMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dao.pokemon.PokemonMain" />
@@ -70,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698737498554</updated>
       <workItem from="1698737499656" duration="13612000" />
+      <workItem from="1698833656377" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="pokemon">
       <option name="closed" value="true" />
