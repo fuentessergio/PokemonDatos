@@ -140,7 +140,7 @@ public class Pokemon implements Externalizable {
 
     @Override
     public String toString() {
-        return "\n" + "Nombre: " + getNombre() + "\n" +
+        return  "Nombre: " + getNombre() + "\n" +
                 "Nivel: " + getNivel() + "\n" +
                 "Vida: " + getVida() + "\n" +
                 "Ataque: " + getAtaque() + "\n" +

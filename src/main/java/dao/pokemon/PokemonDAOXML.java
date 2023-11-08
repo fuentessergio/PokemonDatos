@@ -115,13 +115,13 @@ public class PokemonDAOXML implements PokemonDAO{
     }
 
     @Override
-    public void imprimirPokemon(String nombre) {
+    public void imprimirPokemon(String nombre) throws ElementNotFoundException {
         List<Pokemon> pokemons = leerPokemons();
         for (Pokemon p : pokemons) {
             if (p.getNombre().toLowerCase().contains(nombre.toLowerCase())) {
                 System.out.println(p);
                 System.out.println();
-            }
+            } else throw new ElementNotFoundException();
         }
     }
 
@@ -134,11 +134,11 @@ public class PokemonDAOXML implements PokemonDAO{
             try {
                 String nombre = obtenerValor(pokemonElement,"nombre");
                 gestionarPokemon(pokemons, pokemonElement, nombre);
-
             } catch (ElementNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }
+        System.out.println(pokemons);
         return pokemons;
     }
 

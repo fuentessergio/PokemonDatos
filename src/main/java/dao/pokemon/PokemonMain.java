@@ -13,13 +13,15 @@ import java.nio.file.NoSuchFileException;
  */
 public class PokemonMain {
 
-    public static void main(String[] args) throws NoSuchFileException, PokemonDuplicadoException, NoMasPokemonsException {
+    public static void main(String[] args) throws NoSuchFileException, PokemonDuplicadoException, NoMasPokemonsException, ElementNotFoundException {
         PokemonDAOXML dao = new PokemonDAOXML("pokemons.xml");
-        dao.aniadir(new Pokemon("Bulbasaur", 5, 45, 49, 49, 65, 65, 45));
+        /*dao.aniadir(new Pokemon("Bulbasaur", 5, 45, 49, 49, 65, 65, 45));
         dao.aniadir(new Pokemon("Charmander", 5, 39, 52, 43, 60, 50, 65));
-        dao.aniadir(new Pokemon("Squirtle", 5, 44, 48, 65, 50, 64, 43));
+        dao.aniadir(new Pokemon("Squirtle", 5, 44, 48, 65, 50, 64, 43));*/
+        dao.leerPokemons();
         //Pokemon p1 = new Pokemon("Bulbasaur", 5, 45, 49, 49, 65, 65, 45);
         //dao.eliminar(p1);
+
 
 
 
