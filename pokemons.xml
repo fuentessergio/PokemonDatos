@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><pokemons>
+  <pokemon>
+    <nombre>Bulbasaur</nombre>
+    <nivel>5</nivel>
+    <vida>45</vida>
+    <ataque>49</ataque>
+    <defensa>49</defensa>
+    <ataque_especial>65</ataque_especial>
+    <defensa_especial>65</defensa_especial>
+    <velocidad>45</velocidad>
+  </pokemon>
+  <pokemon>
+    <nombre>Charmander</nombre>
+    <nivel>5</nivel>
+    <vida>39</vida>
+    <ataque>52</ataque>
+    <defensa>43</defensa>
+    <ataque_especial>60</ataque_especial>
+    <defensa_especial>50</defensa_especial>
+    <velocidad>65</velocidad>
+  </pokemon>
+  <pokemon>
+    <nombre>Squirtle</nombre>
+    <nivel>5</nivel>
+    <vida>44</vida>
+    <ataque>48</ataque>
+    <defensa>65</defensa>
+    <ataque_especial>50</ataque_especial>
+    <defensa_especial>64</defensa_especial>
+    <velocidad>43</velocidad>
+  </pokemon>
+</pokemons>
