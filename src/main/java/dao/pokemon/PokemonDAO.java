@@ -101,7 +101,7 @@ public interface PokemonDAO {
         * 
         * @param nombre texto que debe contener el nombre. 
         */	
-	public void imprimirPokemon(String nombre);
+	public void imprimirPokemon(String nombre) throws ElementNotFoundException;
 	
 	/**
 	 * Devuelve una lista de objetos pokemon del almacén.
@@ -109,7 +109,7 @@ public interface PokemonDAO {
 	 * @return lista con todos los pokemons que haya almacenados. 
          *  Lista vacía si no hay ninguno. 
 	 */
-	public List<Pokemon> leerPokemons();
+	public List<Pokemon> leerPokemons() throws ElementNotFoundException;
 
 	/**
 	 *  Devuelve una lista de objetos pokemon que contengan esa cadena en el 
