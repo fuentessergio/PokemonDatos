@@ -159,6 +159,11 @@ public class PokemonDAOFile implements PokemonDAO {
         return pokemonsFiltrados;
     }
 
+    @Override
+    public void actualizar(Pokemon p) throws DataAccessException, IncompatibleVersionException {
+
+    }
+
     private void guardarPokemons (List<Pokemon> pokemons){
         try(PrintWriter pw = new PrintWriter(new FileWriter(archivoCSV))){
             for (Pokemon pokemon : pokemons){
@@ -170,7 +175,4 @@ public class PokemonDAOFile implements PokemonDAO {
             throw new RuntimeException(e);
         }
     }
-
-
-    
 }

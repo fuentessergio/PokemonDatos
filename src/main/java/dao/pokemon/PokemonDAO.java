@@ -124,5 +124,17 @@ public interface PokemonDAO {
          *  Lista vacía si no hay ninguno. 
 	 */
 	public List<Pokemon> leerPokemons(String nombre);
+
+	/**
+	 * Actualiza el Pokemon con los datos nuevos. Se considera que el pokemon es el mismo, si el método
+	 * equals de la clase pokemon devuelve true.
+	 *
+	 * @param p el Pokemon con los mismos datos.
+	 * @throws DataAccessException si no se ha podido acceder al almacén de datos.
+	 * @throws IncompatibleVersionException si la estructura del pokemon recibido como argumento no se corresponde
+	 *      con la que hay en el almacén.
+	 */
+	public void actualizar(Pokemon p)  throws DataAccessException, IncompatibleVersionException;
+
 }
 

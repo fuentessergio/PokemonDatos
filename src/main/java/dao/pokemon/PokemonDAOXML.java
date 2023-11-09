@@ -138,7 +138,7 @@ public class PokemonDAOXML implements PokemonDAO{
                 throw new RuntimeException(e);
             }
         }
-        System.out.println(pokemons);
+        //System.out.println(pokemons);
         return pokemons;
     }
 
@@ -158,6 +158,11 @@ public class PokemonDAOXML implements PokemonDAO{
             }
         }
         return pokemons;
+    }
+
+    @Override
+    public void actualizar(Pokemon p) throws DataAccessException, IncompatibleVersionException {
+
     }
 
     private void gestionarPokemon(List<Pokemon> pokemons, Element pokemonElement, String nombre) throws ElementNotFoundException {
