@@ -29,4 +29,14 @@
     <defensa_especial>64</defensa_especial>
     <velocidad>43</velocidad>
   </pokemon>
+  <pokemon>
+    <nombre>Bulbasaur2</nombre>
+    <nivel>5</nivel>
+    <vida>45</vida>
+    <ataque>49</ataque>
+    <defensa>49</defensa>
+    <ataque_especial>65</ataque_especial>
+    <defensa_especial>65</defensa_especial>
+    <velocidad>45</velocidad>
+  </pokemon>
 </pokemons>

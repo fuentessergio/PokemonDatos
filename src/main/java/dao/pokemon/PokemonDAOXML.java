@@ -134,7 +134,7 @@ public class PokemonDAOXML implements PokemonDAO{
             try {
                 String nombre = obtenerValor(pokemonElement,"nombre");
                 gestionarPokemon(pokemons, pokemonElement, nombre);
-            } catch (ElementNotFoundException e) {
+            } catch (ElementNotFoundException | PokemonDuplicadoException e) {
                 throw new RuntimeException(e);
             }
         }
@@ -153,7 +153,7 @@ public class PokemonDAOXML implements PokemonDAO{
                 if(nombreBuscado.toLowerCase().contains(nombre.toLowerCase())){
                     gestionarPokemon(pokemons, pokemonElement, nombre);
                 }
-            } catch (ElementNotFoundException e) {
+            } catch (ElementNotFoundException | PokemonDuplicadoException e) {
                 throw new RuntimeException(e);
             }
         }
@@ -165,7 +165,7 @@ public class PokemonDAOXML implements PokemonDAO{
 
     }
 
-    private void gestionarPokemon(List<Pokemon> pokemons, Element pokemonElement, String nombre) throws ElementNotFoundException {
+    private void gestionarPokemon(List<Pokemon> pokemons, Element pokemonElement, String nombre) throws ElementNotFoundException, PokemonDuplicadoException {
         int nivel = Integer.parseInt(obtenerValor(pokemonElement,"nivel"));
         int vida = Integer.parseInt(obtenerValor(pokemonElement,"vida"));
         int ataque = Integer.parseInt(obtenerValor(pokemonElement,"ataque"));

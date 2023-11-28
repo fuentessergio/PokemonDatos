@@ -161,7 +161,31 @@ public class PokemonDAOFile implements PokemonDAO {
 
     @Override
     public void actualizar(Pokemon p) throws DataAccessException, IncompatibleVersionException {
+        List<Pokemon> pokemons = leerPokemons();
+        boolean encontrado = false;
 
+        for (int i = 0; i < pokemons.size(); i++) {
+            Pokemon pokemonExistente = pokemons.get(i);
+
+            if(pokemonExistente.getNombre().equals(p.getNombre())){
+                //actualizar los datos del pokemon
+                pokemonExistente.setNivel(p.getNivel());
+                pokemonExistente.setVida(p.getVida());
+                pokemonExistente.setAtaque(p.getAtaque());
+                pokemonExistente.setDefensa(p.getDefensa());
+                pokemonExistente.setAtaqueEspecial(p.getAtaqueEspecial());
+                pokemonExistente.setDefensaEspecial(p.getDefensaEspecial());
+                pokemonExistente.setVelocidad(p.getVelocidad());
+
+                System.out.println("pokemon actualizado");
+                encontrado= true;
+                break;
+            }
+
+        }
+        if(encontrado){
+            guardarPokemons(pokemons);
+        } else throw new DataAccessException();
     }
 
     private void guardarPokemons (List<Pokemon> pokemons){

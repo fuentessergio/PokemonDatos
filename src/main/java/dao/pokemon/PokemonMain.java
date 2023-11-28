@@ -13,12 +13,12 @@ import java.nio.file.NoSuchFileException;
  */
 public class PokemonMain {
 
-    public static void main(String[] args) throws NoSuchFileException, PokemonDuplicadoException, NoMasPokemonsException, ElementNotFoundException {
+    public static void main(String[] args) throws NoSuchFileException, PokemonDuplicadoException, NoMasPokemonsException, ElementNotFoundException, IncompatibleVersionException, DataAccessException {
         PokemonDAOXML dao = new PokemonDAOXML("pokemons.xml");
-        /*dao.aniadir(new Pokemon("Bulbasaur", 5, 45, 49, 49, 65, 65, 45));
-        dao.aniadir(new Pokemon("Charmander", 5, 39, 52, 43, 60, 50, 65));
-        dao.aniadir(new Pokemon("Squirtle", 5, 44, 48, 65, 50, 64, 43));*/
-        dao.leerPokemons();
+        //dao.aniadir(new Pokemon("Bulbasaur2", 5, 45, 49, 49, 65, 65, 45));
+        //dao.aniadir(new Pokemon("Charmander", 5, 39, 52, 43, 60, 50, 65));
+        //dao.aniadir(new Pokemon("Squirtle", 5, 44, 48, 65, 50, 64, 43));*/
+        //dao.leerPokemons();
         //Pokemon p1 = new Pokemon("Bulbasaur", 5, 45, 49, 49, 65, 65, 45);
         //dao.eliminar(p1);
 
@@ -27,10 +27,12 @@ public class PokemonMain {
 
 
 
-        //PokemonDAOFile pokemonDAO = new PokemonDAOFile("C:\\Users\\fuent\\OneDrive\\Documentos\\GitHub\\PokemonDatos\\pokemons.csv");
+        PokemonDAOFile pokemonDAO = new PokemonDAOFile("C:\\Users\\2DAM\\Documents\\GitHub\\PokemonDatos\\pokemons.csv");
 
 
-        //Pokemon p2 = new Pokemon("Jorge", 3, 90, 65, 48, 79, 45, 80);
+        Pokemon p2 = new Pokemon("Jorge2", 3, 90, 65, 48, 79, 45, 80);
+        Pokemon pokemonActualizar = new Pokemon("Sergio8", 10, 90, 65, 48, 79, 45, 80);
+
 
         //pokemonDAO.estaVacio();
         /*if (!pokemonDAO.estaLLeno()) {
@@ -39,7 +41,7 @@ public class PokemonMain {
             System.out.println("La lista de Pokémon está llena.");
         }*/
         /*try {
-            pokemonDAO.aniadir(p2);
+            pokemonDAO.aniadir(p3);
         } catch (NoMasPokemonsException e) {
             throw new RuntimeException(e);
         } catch (PokemonDuplicadoException e) {
@@ -50,5 +52,19 @@ public class PokemonMain {
         //pokemonDAO.imprimirPokemonCSV("pokemons.csv");
         //pokemonDAO.imprimirPokemon("Char");
         //pokemonDAO.leerPokemons();
+        try {
+            // Resto del código...
+
+            // Llamar al método actualizar
+            pokemonDAO.actualizar(pokemonActualizar);
+
+            // Resto del código...
+        } catch (DataAccessException dae) {
+            dae.printStackTrace();
+            System.out.println("Error al actualizar el Pokémon: " + dae.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Maneja otras excepciones
+        }
     }
 }

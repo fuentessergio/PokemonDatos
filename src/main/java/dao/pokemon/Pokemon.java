@@ -27,7 +27,7 @@ public class Pokemon implements Externalizable {
     private List<Pokemon> listaPokemon = new ArrayList<>();
 
     public Pokemon(){
-        // constructor vacío, porque es un JavaBean
+        // constructor vacío, porque es un JavaBean (serializar)
     }
 
 
