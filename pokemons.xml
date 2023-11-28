@@ -30,13 +30,13 @@
     <velocidad>43</velocidad>
   </pokemon>
   <pokemon>
-    <nombre>Bulbasaur2</nombre>
-    <nivel>5</nivel>
-    <vida>45</vida>
-    <ataque>49</ataque>
-    <defensa>49</defensa>
-    <ataque_especial>65</ataque_especial>
-    <defensa_especial>65</defensa_especial>
-    <velocidad>45</velocidad>
+    <nombre>Squirtle2</nombre>
+    <nivel>50</nivel>
+    <vida>50</vida>
+    <ataque>50</ataque>
+    <defensa>50</defensa>
+    <ataque_especial>50</ataque_especial>
+    <defensa_especial>50</defensa_especial>
+    <velocidad>50</velocidad>
   </pokemon>
 </pokemons>

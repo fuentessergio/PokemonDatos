@@ -160,7 +160,7 @@ public class PokemonDAOFile implements PokemonDAO {
     }
 
     @Override
-    public void actualizar(Pokemon p) throws DataAccessException, IncompatibleVersionException {
+    public void actualizar(Pokemon p) {
         List<Pokemon> pokemons = leerPokemons();
         boolean encontrado = false;
 
@@ -185,7 +185,7 @@ public class PokemonDAOFile implements PokemonDAO {
         }
         if(encontrado){
             guardarPokemons(pokemons);
-        } else throw new DataAccessException();
+        } else throw new RuntimeException();
     }
 
     private void guardarPokemons (List<Pokemon> pokemons){

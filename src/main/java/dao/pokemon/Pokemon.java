@@ -33,7 +33,7 @@ public class Pokemon implements Externalizable {
 
     public Pokemon(String nombre, int nivel, int vida, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad) {
         this.nombre = nombre;
-        this.nivel = nivel;
+        setNivel(nivel); // configurar bien el constructor para que salga asiiii
         this.vida = vida;
         this.ataque = ataque;
         this.defensa = defensa;
@@ -64,7 +64,7 @@ public class Pokemon implements Externalizable {
     }
 
     public void setNivel(int nivel) {
-        if(nivel<0 || nivel>100){
+        if(nivel<=0 || nivel>100){
             throw new IllegalArgumentException("El Pokemon no puede tener nivel 0 o ser superior a 100");
         }
         this.nivel = nivel;

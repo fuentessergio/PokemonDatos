@@ -101,7 +101,7 @@ public interface PokemonDAO {
         * 
         * @param nombre texto que debe contener el nombre. 
         */	
-	public void imprimirPokemon(String nombre) throws ElementNotFoundException;
+	public void imprimirPokemon(String nombre);
 	
 	/**
 	 * Devuelve una lista de objetos pokemon del almacén.
@@ -134,7 +134,7 @@ public interface PokemonDAO {
 	 * @throws IncompatibleVersionException si la estructura del pokemon recibido como argumento no se corresponde
 	 *      con la que hay en el almacén.
 	 */
-	public void actualizar(Pokemon p)  throws DataAccessException, IncompatibleVersionException;
+	public void actualizar(Pokemon p);
 
 }
 

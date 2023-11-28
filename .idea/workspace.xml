@@ -7,12 +7,17 @@
     <list default="true" id="c114e0d5-5957-40de-b0d2-6643750697ff" name="Changes" comment="me falta metodo actualizar en xml y en csv">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokemons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pokemons.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokemons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pokemons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonDAOXML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/pokemon/PokemonMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/Pokemon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonDAOXML.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/pokemon/PokemonMain.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

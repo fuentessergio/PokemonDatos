@@ -93,9 +93,10 @@ public class PokemonDAOXML implements PokemonDAO{
     public boolean eliminar(Pokemon pokemon) {
         NodeList pokemonNodes = document.getElementsByTagName("pokemon");
         for (int i = 0; i < pokemonNodes.getLength(); i++) {
-            Element pokemonElement = (Element) pokemonNodes.item(0);
+            Element pokemonElement = (Element) pokemonNodes.item(i);
             String nombre = pokemonElement.getElementsByTagName("nombre").item(0).getTextContent();
             if(nombre.equals(pokemon.getNombre())){
+                System.out.println("Pokemon: " + nombre);
                 pokemonElement.getParentNode().removeChild(pokemonElement);
                 guardarXML();
                 return true;
@@ -115,13 +116,13 @@ public class PokemonDAOXML implements PokemonDAO{
     }
 
     @Override
-    public void imprimirPokemon(String nombre) throws ElementNotFoundException {
+    public void imprimirPokemon(String nombre) {
         List<Pokemon> pokemons = leerPokemons();
         for (Pokemon p : pokemons) {
             if (p.getNombre().toLowerCase().contains(nombre.toLowerCase())) {
                 System.out.println(p);
                 System.out.println();
-            } else throw new ElementNotFoundException();
+            } else throw new RuntimeException();
         }
     }
 
@@ -134,7 +135,7 @@ public class PokemonDAOXML implements PokemonDAO{
             try {
                 String nombre = obtenerValor(pokemonElement,"nombre");
                 gestionarPokemon(pokemons, pokemonElement, nombre);
-            } catch (ElementNotFoundException | PokemonDuplicadoException e) {
+            } catch (PokemonDuplicadoException e) {
                 throw new RuntimeException(e);
             }
         }
@@ -153,19 +154,38 @@ public class PokemonDAOXML implements PokemonDAO{
                 if(nombreBuscado.toLowerCase().contains(nombre.toLowerCase())){
                     gestionarPokemon(pokemons, pokemonElement, nombre);
                 }
-            } catch (ElementNotFoundException | PokemonDuplicadoException e) {
+            } catch (PokemonDuplicadoException e) {
                 throw new RuntimeException(e);
             }
         }
+        System.out.println(pokemons);
         return pokemons;
     }
 
     @Override
-    public void actualizar(Pokemon p) throws DataAccessException, IncompatibleVersionException {
+    public void actualizar(Pokemon p) {
+        NodeList pokemonNodes = document.getElementsByTagName("pokemon");
+        for (int i = 0; i < pokemonNodes.getLength(); i++) {
+            Element pokemon = (Element) pokemonNodes.item(i);
+            String nombre = obtenerValor(pokemon,"nombre");
+            if(nombre.equals(p.getNombre())){
+                //actualizar valores
+                pokemon.getElementsByTagName("nivel").item(0).setTextContent(String.valueOf(p.getNivel()));
+                pokemon.getElementsByTagName("vida").item(0).setTextContent(String.valueOf(p.getVida()));
+                pokemon.getElementsByTagName("ataque").item(0).setTextContent(String.valueOf(p.getAtaque()));
+                pokemon.getElementsByTagName("defensa").item(0).setTextContent(String.valueOf(p.getDefensa()));
+                pokemon.getElementsByTagName("ataque_especial").item(0).setTextContent(String.valueOf(p.getAtaqueEspecial()));
+                pokemon.getElementsByTagName("defensa_especial").item(0).setTextContent(String.valueOf(p.getDefensaEspecial()));
+                pokemon.getElementsByTagName("velocidad").item(0).setTextContent(String.valueOf(p.getVelocidad()));
 
+                // Guardar los cambios en el archivo XML
+                guardarXML();
+                break;
+            }
+        }
     }
 
-    private void gestionarPokemon(List<Pokemon> pokemons, Element pokemonElement, String nombre) throws ElementNotFoundException, PokemonDuplicadoException {
+    private void gestionarPokemon(List<Pokemon> pokemons, Element pokemonElement, String nombre) throws PokemonDuplicadoException {
         int nivel = Integer.parseInt(obtenerValor(pokemonElement,"nivel"));
         int vida = Integer.parseInt(obtenerValor(pokemonElement,"vida"));
         int ataque = Integer.parseInt(obtenerValor(pokemonElement,"ataque"));
@@ -179,7 +199,7 @@ public class PokemonDAOXML implements PokemonDAO{
     }
 
 
-    private String obtenerValor (Element padreElement, String elementName) throws ElementNotFoundException {
+    private String obtenerValor (Element padreElement, String elementName){
         //buscamos elementos con el nombre que se proporciona
         NodeList elements = padreElement.getElementsByTagName(elementName);
 
@@ -192,7 +212,7 @@ public class PokemonDAOXML implements PokemonDAO{
                 return elementNode.getNodeValue();
             }
         }
-        throw new ElementNotFoundException();
+        throw new RuntimeException();
     }
     private void guardarXML(){
         try{
